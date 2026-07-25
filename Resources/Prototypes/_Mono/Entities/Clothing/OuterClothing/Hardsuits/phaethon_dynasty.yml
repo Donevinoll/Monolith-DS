@@ -149,7 +149,7 @@
     - RogueHardsuit
 
 - type: entity
-  parent: ClothingOuterHardsuitSyndieCommander
+  parent: [ClothingOuterHardsuitSyndieCommander, MonoEnergyShieldClothing] #LuaM add: MonoEnergyShieldClothing
   id: ClothingOuterHardsuitVizier
   name: PDV CV-67 combat tacsuit
   description: An adorned tacsuit designed with an imperfect nanolaminate composition. High maneuverability, sturdy armor.
@@ -189,6 +189,21 @@
   - type: Tag
     tags:
     - RogueHardsuit
+  - type: PersonalShield #LuaM add
+    color: "#ff0000"
+    shield:
+      maxCharge: 450 
+      regenRate: 6
+      spinupTime: 5 
+      breakCooldown: 30
+      powerDraw: 0.5
+  - type: Battery
+    maxCharge: 60
+    startingCharge: 60
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 0.1
+
 
 - type: entity
   parent: [ClothingOuterHardsuitSyndieElite, MonoEnergyShieldClothing ]

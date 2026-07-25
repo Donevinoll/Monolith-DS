@@ -115,9 +115,9 @@
   - type: PersonalShield #LuaM add
     color: "#FF00FFFF"
     shield:
-      maxCharge: 450 #LuaM 600 < 500
+      maxCharge: 450
       regenRate: 6
-      spinupTime: 5 #LuaM 1 < 5
+      spinupTime: 5
       breakCooldown: 30
       powerDraw: 0.5
   - type: Battery
@@ -128,7 +128,7 @@
     autoRechargeRate: 0.1
 
 - type: entity
-  parent: ClothingOuterHardsuitBaseNFNfsd
+  parent: [ClothingOuterHardsuitBaseNFNfsd, MonoEnergyShieldClothing] #LuaM add: MonoEnergyShieldClothing
   id: ClothingOuterHardsuitNfsdSheriff
   name: TSFMC M92 colonel tacsuit
   description: A heavy, gilded tacsuit, stripped of its shield but now capable of taking a lot of physical damage. Usually assigned to commanding officers of TSF flagships.
@@ -166,9 +166,23 @@
     coefficient: 0.55 # LuaM: 0.35 > 0.55
   - type: PirateBountyItem # Mono
     id: ClothingOuterHardsuitTacsuitHighValue
+  - type: PersonalShield #LuaM add
+    color: "#FF00FFFF"
+    shield:
+      maxCharge: 350
+      regenRate: 6
+      spinupTime: 5
+      breakCooldown: 30
+      powerDraw: 0.5
+  - type: Battery
+    maxCharge: 60
+    startingCharge: 60
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 0.1
 
 - type: entity
-  parent: [ClothingOuterHardsuitJuggernaut, MonoEnergyShieldClothing, BaseFactionGearTSFT3 ] # Jugger Suit # LuaM: removed EnergyShieldClothing
+  parent: [ClothingOuterHardsuitJuggernaut, MonoEnergyShieldClothing, BaseFactionGearTSFT3 ] # Jugger Suit 
   id: ClothingOuterHardsuitNfsdExperimental
   name: TSFMC M92-X tacsuit
   description: An experimental modification of the M92 tacsuit for spec-ops units of the TSFMC. Durable, and comes with an integrated soft-shield along with numerous gadgets at the cost of insulation and solid armor.
