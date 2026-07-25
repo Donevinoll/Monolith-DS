@@ -217,9 +217,9 @@
   - type: PersonalShield #LuaM add
     color: "#FF00FFFF"
     shield:
-      maxCharge: 500 #LuaM 600 < 500
+      maxCharge: 500
       regenRate: 6
-      spinupTime: 5 #LuaM 1 < 5
+      spinupTime: 5
       breakCooldown: 30
       powerDraw: 0.5
   - type: Battery
@@ -290,3 +290,17 @@
   - type: ClothingSpeedModifier
     walkModifier: 1.1 # LuaM: 0.9 > 1.1
     sprintModifier: 1.1 # LuaM: 0.875 > 1.1
+  - type: PersonalShield #LuaM add
+    color: "#FF00FFFF"
+    shield:
+      maxCharge: 500
+      regenRate: 6
+      spinupTime: 5
+      breakCooldown: 30
+      powerDraw: 0.5
+  - type: Battery
+    maxCharge: 60
+    startingCharge: 60
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 0.1
