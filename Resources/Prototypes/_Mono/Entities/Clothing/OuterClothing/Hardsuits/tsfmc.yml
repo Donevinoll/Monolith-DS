@@ -69,7 +69,7 @@
     sprintModifier: 0.95
 
 - type: entity
-  parent: [ClothingOuterHardsuitBase, BaseFactionGearTSFT3]
+  parent: [ClothingOuterHardsuitBase, MonoEnergyShieldClothing, BaseFactionGearTSFT3]
   id: ClothingOuterHardsuitM86
   name: M86 Mk.3(R) hardsuit
   description: An armored hardsuit, designed to be an upgrade for the M82 series. The extra general armor gives it significant weight to move around.
@@ -112,6 +112,20 @@
   - type: StaticPrice
     price: 7500
     vendPrice: 1000
+  - type: PersonalShield #LuaM add
+    color: "#FF00FFFF"
+    shield:
+      maxCharge: 450 #LuaM 600 < 500
+      regenRate: 6
+      spinupTime: 5 #LuaM 1 < 5
+      breakCooldown: 30
+      powerDraw: 0.5
+  - type: Battery
+    maxCharge: 60
+    startingCharge: 60
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 0.1
 
 - type: entity
   parent: ClothingOuterHardsuitBaseNFNfsd
@@ -154,7 +168,7 @@
     id: ClothingOuterHardsuitTacsuitHighValue
 
 - type: entity
-  parent: [ClothingOuterHardsuitJuggernaut, BaseFactionGearTSFT3 ] # Jugger Suit # LuaM: removed EnergyShieldClothing
+  parent: [ClothingOuterHardsuitJuggernaut, MonoEnergyShieldClothing, BaseFactionGearTSFT3 ] # Jugger Suit # LuaM: removed EnergyShieldClothing
   id: ClothingOuterHardsuitNfsdExperimental
   name: TSFMC M92-X tacsuit
   description: An experimental modification of the M92 tacsuit for spec-ops units of the TSFMC. Durable, and comes with an integrated soft-shield along with numerous gadgets at the cost of insulation and solid armor.
@@ -200,6 +214,20 @@
   - type: FootstepModifier # LuaM
     footstepSoundCollection:
       collection: FootstepHeavySuit
+  - type: PersonalShield #LuaM add
+    color: "#FF00FFFF"
+    shield:
+      maxCharge: 500 #LuaM 600 < 500
+      regenRate: 6
+      spinupTime: 5 #LuaM 1 < 5
+      breakCooldown: 30
+      powerDraw: 0.5
+  - type: Battery
+    maxCharge: 60
+    startingCharge: 60
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 0.1
 #  - type: Blocking # Commented by LuaM
 #    passiveBlockModifier:
 #      coefficients:
