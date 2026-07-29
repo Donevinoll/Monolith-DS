@@ -46,7 +46,7 @@
     - RogueHardsuit
 
 - type: entity
-  parent: [ ClothingOuterHardsuitSyndie, BaseFactionGearPDVT2, MonoEnergyShieldClothing ]
+  parent: [ ClothingOuterHardsuitSyndie, BaseFactionGearPDVT2, MonoEnergyShieldClothing ] # LuaM add: MonoEnergyShieldClothing 
   id: ClothingOuterHardsuitAshen
   name: PDV CV-32 combat hardsuit
   description: A combat hardsuit designed by the Phaethon Dynasty. A heavier but still general-purpose hardsuit, effective but not stellar against most damage types.
@@ -86,7 +86,8 @@
   - type: Tag
     tags:
     - RogueHardsuit
-  - type: PersonalShield #LuaM add
+# LuaM-start:
+  - type: PersonalShield 
     color: "#ff0000"
     shield:
       maxCharge: 400 
@@ -100,6 +101,7 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 0.1
+# LuaM-end.
 
 - type: entity
   parent: [ ClothingOuterHardsuitBase, BaseFactionGearPDVT2 ]
@@ -189,7 +191,8 @@
   - type: Tag
     tags:
     - RogueHardsuit
-  - type: PersonalShield #LuaM add
+# # LuaM-start:
+  - type: PersonalShield 
     color: "#ff0000"
     shield:
       maxCharge: 450 
@@ -203,10 +206,11 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 0.1
+# LuaM-end.
 
 
 - type: entity
-  parent: [ClothingOuterHardsuitSyndieElite, MonoEnergyShieldClothing ]
+  parent: [ClothingOuterHardsuitSyndieElite, MonoEnergyShieldClothing ] # LuaM: EnergyShieldClothing > MonoEnergyShieldClothing
   id: ClothingOuterHardsuitAshenElite
   name: PDV CV-53 combat tacsuit
   description: Originally based off of the CV-32 hardsuit, the CV-53 tacsuit sacrifices conventional armor plating for environmental protection, and a rechargeable hard-shield.
@@ -244,7 +248,8 @@
   - type: Tag
     tags:
     - RogueHardsuit
-  - type: PersonalShield #LuaM 
+# LuaM-start:
+  - type: PersonalShield 
     color: "#ff0000"
     shield:
       maxCharge: 350 #LuaM 600 < 500
@@ -258,6 +263,7 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 0.1
+# LuaM-end.
   # Shielding
 #  - type: Blocking # Commented by LuaM
 #    passiveBlockModifier:
